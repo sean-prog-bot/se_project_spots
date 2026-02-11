@@ -1,0 +1,9 @@
+.footer {
+  background-color: #212121b2 70%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 100%;
+}
