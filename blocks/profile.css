@@ -79,6 +79,10 @@
   cursor: pointer;
 }
 
+.profile__add-btn:hover {
+  opacity: 1;
+}
+
 @media screen and (max-width: 627px) {
   .profile {
     flex-direction: column;
@@ -100,6 +104,10 @@
     max-width: 288px;
   }
 
+  .profile__add-btn {
+    width: 100%;
+  }
+
   .profile__description {
     margin: 0 0 32px;
     max-width: 288px;
@@ -107,5 +115,6 @@
 
   .profile__column {
     margin: 0 0 20px;
+    align-items: center;
   }
 }
