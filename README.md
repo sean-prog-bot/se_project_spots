@@ -16,7 +16,7 @@ This is a project shows different views as we know them as mobile and desktop.
 
 This webpage is depolyed to github pages.
 
--Deployment Link:
+-Deployment Link: https://sean-prog-bot.github.io/se_project_spots/
 
 ## Project Pitch Video
 
