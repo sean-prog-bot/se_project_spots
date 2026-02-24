@@ -17,3 +17,8 @@ This is a project shows different views as we know them as mobile and desktop.
 This webpage is depolyed to github pages.
 
 -Deployment Link:
+
+## Project Pitch Video
+
+Check out [this video](https://drive.google.com/file/d/1xRQiCUmofq05gTo-hIwg-KZcFUW_wFbV/view?usp=sharing), where I describe my
+project and some challenges I faced while building it.
