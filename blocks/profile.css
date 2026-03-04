@@ -44,7 +44,7 @@
   color: #212121b2;
 }
 
-.edit__profile-btn {
+.profile__edit-btn {
   align-items: center;
   font-size: 16px;
   line-height: 1;
@@ -59,7 +59,7 @@
   opacity: 0.7;
   cursor: pointer;
 }
-.edit__profile-btn:hover {
+.profile__edit-btn:hover {
   opacity: 1;
 }
 
