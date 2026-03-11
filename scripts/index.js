@@ -1,12 +1,30 @@
 const profileEditBtn = document.querySelector(".profile__edit-btn");
 const profileEditModal = document.querySelector("#profile-edit-modal");
 const profileEditCloseBtn = profileEditModal.querySelector(".modal__close-btn");
+const editProfileForm = profileEditModal.querySelector(".modal__form");
+const editProfileNameInput = profileEditModal.querySelector(
+  "#profile-name-input",
+);
+
+const editProfileDescriptionInput = profileEditModal.querySelector(
+  "#profile-description-input",
+);
 
 const newPostBtn = document.querySelector(".profile__new-post-btn");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
+const editNewPostForm = newPostModal.querySelector(".modal__form");
+const editNewPostLinkInput = newPostModal.querySelector("#card-image-input");
+const editNewPostCaptionInput = newPostModal.querySelector(
+  "#card-caption-input",
+);
+
+const profileNameEl = document.querySelector(".profile__name");
+const profileDescriptionEl = document.querySelector(".profile__description");
 
 profileEditBtn.addEventListener("click", function () {
+  editProfileNameInput.value = profileNameEl.textContent;
+  editProfileDescriptionInput.value = profileDescriptionEl.textContent;
   profileEditModal.classList.add("modal_is-opened");
 });
 
@@ -15,9 +33,28 @@ profileEditCloseBtn.addEventListener("click", function () {
 });
 
 newPostBtn.addEventListener("click", function () {
+  editNewPostLinkInput.value;
+  editNewPostCaptionInput.value;
   newPostModal.classList.add("modal_is-opened");
 });
 
 newPostCloseBtn.addEventListener("click", function () {
   newPostModal.classList.remove("modal_is-opened");
 });
+
+function handleEditProfileSubmit(evt) {
+  evt.preventDefault();
+  profileNameEl.textContent = editProfileNameInput.value;
+  profileDescriptionEl.textContent = editProfileDescriptionInput.value;
+  profileEditModal.classList.remove("modal_is-opened");
+}
+
+editProfileForm.addEventListener("submit", handleEditProfileSubmit);
+
+function handleEditNewPostSubmit(evt) {
+  editNewPostLinkInput.value;
+  editNewPostCaptionInput.value;
+  console.log(submitting);
+}
+
+editNewPostForm.addEventListener("submit", handleEditNewPostSubmit);
