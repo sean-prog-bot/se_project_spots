@@ -33,8 +33,8 @@ profileEditCloseBtn.addEventListener("click", function () {
 });
 
 newPostBtn.addEventListener("click", function () {
-  editNewPostLinkInput.value;
-  editNewPostCaptionInput.value;
+  editNewPostLinkInput.value = "";
+  editNewPostCaptionInput.value = "";
   newPostModal.classList.add("modal_is-opened");
 });
 
@@ -52,9 +52,10 @@ function handleEditProfileSubmit(evt) {
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
 function handleEditNewPostSubmit(evt) {
-  editNewPostLinkInput.value;
-  editNewPostCaptionInput.value;
+  evt.preventDefault();
+  console.log(editNewPostLinkInput.value, editNewPostCaptionInput.value);
   console.log(submitting);
+  editNewPostModal.classList.remove("modal_is-opened");
 }
 
 editNewPostForm.addEventListener("submit", handleEditNewPostSubmit);

@@ -10,10 +10,16 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
+  opacity: 0;
+  transition:
+    visibility 0s linear 0.5s,
+    opacity 0.5s linear;
 }
 
 .modal_is-opened {
   visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
 }
 
 .modal__container {
@@ -30,7 +36,7 @@
   right: 50px;
   width: 40px;
   height: 40px;
-  image: url(../images/Close\ Icon.svg);
+  background-image: url(../images/Close\ Icon.svg);
 }
 
 .modal__title {
@@ -72,6 +78,10 @@
   font-weight: 500;
   border: none;
   cursor: pointer;
+}
+
+.modal__submit-btn:hover {
+  background-color: #000000;
 }
 
 @media screen and (max-width: 627px) {
