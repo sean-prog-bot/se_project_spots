@@ -28,8 +28,16 @@ profileEditBtn.addEventListener("click", function () {
   profileEditModal.classList.add("modal_is-opened");
 });
 
+function openModal(modal) {
+  modal.classList.add("modal_is-opened");
+}
+
+function closeModal(modal) {
+  modal.classList.remove("modal_is-opened");
+}
+
 profileEditCloseBtn.addEventListener("click", function () {
-  profileEditModal.classList.remove("modal_is-opened");
+  closeModal(profileEditModal);
 });
 
 newPostBtn.addEventListener("click", function () {
@@ -46,7 +54,7 @@ function handleEditProfileSubmit(evt) {
   evt.preventDefault();
   profileNameEl.textContent = editProfileNameInput.value;
   profileDescriptionEl.textContent = editProfileDescriptionInput.value;
-  profileEditModal.classList.remove("modal_is-opened");
+  profileEditModal.closeModal.remove("modal_is-opened");
 }
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
@@ -55,7 +63,7 @@ function handleEditNewPostSubmit(evt) {
   evt.preventDefault();
   console.log(editNewPostLinkInput.value, editNewPostCaptionInput.value);
   console.log("submitting");
-  newPostModal.classList.remove("modal_is-opened");
+  newPostModal.openModal.remove("modal_is-opened");
 }
 
 editNewPostForm.addEventListener("submit", handleEditNewPostSubmit);
