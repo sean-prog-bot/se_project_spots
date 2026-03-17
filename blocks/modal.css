@@ -93,6 +93,10 @@
 }
 
 @media screen and (max-width: 627px) {
+  .modal__close-btn {
+    top: 16px;
+    right: 16px;
+  }
   .modal__container {
     width: 300px;
     padding: 10px;
