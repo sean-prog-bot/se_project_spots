@@ -12,6 +12,15 @@
   display: block;
   border-radius: 8px;
   margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.card__image:hover {
+  opacity: 0.8;
+}
+
+.card__image:focus {
+  outline: 2px solid HighlightColor;
 }
 
 .card__title {
@@ -50,11 +59,12 @@
 
 .card__like-btn {
   background-image: url(../images/heart.svg);
+  background-repeat: no-repeat;
   width: 23px;
   height: 20px;
   border: none;
   background-color: transparent;
-  opacity: 40%;
+  opacity: 0.4;
 }
 
 .card__like-btn:hover {
@@ -74,6 +84,7 @@
 @media screen and (max-width: 627px) {
   .card__image {
     height: 288px;
+    cursor: pointer;
   }
 
   .card__title {

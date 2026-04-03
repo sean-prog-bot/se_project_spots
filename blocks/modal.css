@@ -73,10 +73,12 @@
   background-image: url(../images/Close\ Icon.svg);
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .modal__close-btn:hover {
   opacity: 0.6;
+  cursor: pointer;
 }
 
 .modal__title {

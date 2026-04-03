@@ -50,16 +50,16 @@ const editNewPostCaptionInput = newPostModal.querySelector(
   "#card-caption-input",
 );
 
-const PreviewModal = document.querySelector("#preview-modal");
-const PreviewModalCloseBtn = PreviewModal.querySelector(".modal__close");
-const PreviewImageEl = PreviewModal.querySelector(".modal__image");
-const PreviewCaptionEl = PreviewModal.querySelector(".modal__caption");
+const previewModal = document.querySelector("#preview-modal");
+const previewModalCloseBtn = previewModal.querySelector(".modal__close");
+const previewImageEl = previewModal.querySelector(".modal__image");
+const previewCaptionEl = previewModal.querySelector(".modal__caption");
 
 const cardTemplate = document
   .querySelector("#card-template")
   .content.querySelector(".card");
 
-const cardslist = document.querySelector(".cards__list");
+const cardsList = document.querySelector(".cards__list");
 
 function getCardElement(data) {
   const cardElement = cardTemplate.cloneNode(true);
@@ -81,9 +81,10 @@ function getCardElement(data) {
   });
 
   cardImageEl.addEventListener("click", () => {
-    PreviewImageEl.src = data.link;
-    PreviewCaptionEl.textContent = data.name;
-    openModal(PreviewModal);
+    previewImageEl.src = data.link;
+    previewImageEl.alt = data.name;
+    previewCaptionEl.textContent = data.name;
+    openModal(previewModal);
   });
 
   return cardElement;
@@ -120,8 +121,8 @@ newPostCloseBtn.addEventListener("click", function () {
   closeModal(newPostModal);
 });
 
-PreviewModalCloseBtn.addEventListener("click", function () {
-  closeModal(PreviewModal);
+previewModalCloseBtn.addEventListener("click", function () {
+  closeModal(previewModal);
 });
 
 function handleEditProfileSubmit(evt) {
@@ -139,17 +140,18 @@ function handleEditNewPostSubmit(evt) {
   console.log("submitting");
   closeModal(newPostModal);
 }
-const inputvalues = {
+
+const inputValues = {
   name: editNewPostCaptionInput.value,
   link: editNewPostLinkInput.value,
 };
 
-const cardElement = getCardElement(inputvalues);
-cardslist.prepend(cardElement);
+const cardElement = getCardElement(inputValues);
+cardsList.prepend(cardElement);
 
 editNewPostForm.addEventListener("submit", handleEditNewPostSubmit);
 
 initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);
-  cardslist.append(cardElement);
+  cardsList.append(cardElement);
 });
