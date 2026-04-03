@@ -134,8 +134,10 @@ editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
 function handleEditNewPostSubmit(evt) {
   evt.preventDefault();
-  editNewPostLinkInput.value = "";
-  editNewPostCaptionInput.value = "";
+  const inputValues = {
+    name: editNewPostCaptionInput.value,
+    link: editNewPostLinkInput.value,
+  };
   console.log("submitting");
   closeModal(newPostModal);
 }

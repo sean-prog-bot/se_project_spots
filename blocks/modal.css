@@ -19,6 +19,7 @@
 
 .modal__type_preview {
   padding: 0 16px;
+  background-color: dark;
 }
 
 .modal_is-opened {
