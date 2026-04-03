@@ -112,8 +112,6 @@ profileEditCloseBtn.addEventListener("click", function () {
 });
 
 newPostBtn.addEventListener("click", function () {
-  editNewPostLinkInput.value = "";
-  editNewPostCaptionInput.value = "";
   openModal(newPostModal);
 });
 
@@ -136,7 +134,8 @@ editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
 function handleEditNewPostSubmit(evt) {
   evt.preventDefault();
-  console.log(editNewPostLinkInput.value, editNewPostCaptionInput.value);
+  editNewPostLinkInput.value = "";
+  editNewPostCaptionInput.value = "";
   console.log("submitting");
   closeModal(newPostModal);
 }

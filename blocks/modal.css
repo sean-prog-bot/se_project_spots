@@ -14,6 +14,7 @@
   transition:
     visibility 0s linear 0.5s,
     opacity 0.5s linear;
+  z-index: 1;
 }
 
 .modal__type_preview {
@@ -143,6 +144,7 @@
 
 .modal__caption {
   color: white;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 @media screen and (max-width: 627px) {
@@ -157,7 +159,7 @@
   }
 
   .modal__image {
-    max-width: unset;
+    max-width: 90vw;
   }
 
   .modal__container {
