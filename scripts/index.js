@@ -138,17 +138,11 @@ function handleEditNewPostSubmit(evt) {
     name: editNewPostCaptionInput.value,
     link: editNewPostLinkInput.value,
   };
-  console.log("submitting");
+  const cardElement = getCardElement(inputValues);
+  cardsList.prepend(cardElement);
+  editNewPostForm.reset();
   closeModal(newPostModal);
 }
-
-const inputValues = {
-  name: editNewPostCaptionInput.value,
-  link: editNewPostLinkInput.value,
-};
-
-const cardElement = getCardElement(inputValues);
-cardsList.prepend(cardElement);
 
 editNewPostForm.addEventListener("submit", handleEditNewPostSubmit);
 
