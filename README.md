@@ -20,5 +20,9 @@ This webpage is depolyed to github pages.
 
 ## Project Pitch Video
 
-Check out [this video](https://drive.google.com/file/d/1xRQiCUmofq05gTo-hIwg-KZcFUW_wFbV/view?usp=sharing), where I describe my
+Check out [this video] where I describe my
 project and some challenges I faced while building it.
+
+[first video](https://drive.google.com/file/d/1xRQiCUmofq05gTo-hIwg-KZcFUW_wFbV/view?usp=sharing),
+
+[second video] https://drive.google.com/file/d/15OWDkUTgJt5m1a3keFFnkGP8n1GZr-3y/view?usp=drive_link

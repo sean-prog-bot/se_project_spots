@@ -29,6 +29,7 @@ const initialCards = [
   },
 ];
 
+//profileel
 const profileEditBtn = document.querySelector(".profile__edit-btn");
 const profileEditModal = document.querySelector("#profile-edit-modal");
 const profileEditCloseBtn = profileEditModal.querySelector(".modal__close-btn");
@@ -41,15 +42,27 @@ const editProfileDescriptionInput = profileEditModal.querySelector(
   "#profile-description-input",
 );
 
+const profileNameEl = document.querySelector(".profile__name");
+const profileDescriptionEl = document.querySelector(".profile__description");
+
+profileEditBtn.addEventListener("click", function () {
+  editProfileNameInput.value = profileNameEl.textContent;
+  editProfileDescriptionInput.value = profileDescriptionEl.textContent;
+  openModal(profileEditModal);
+});
+
+//newpostel
 const newPostBtn = document.querySelector(".profile__new-post-btn");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 const editNewPostForm = newPostModal.querySelector(".modal__form");
+const editNewPostBtn = newPostModal.querySelector(".modal__button");
 const editNewPostLinkInput = newPostModal.querySelector("#card-image-input");
 const editNewPostCaptionInput = newPostModal.querySelector(
   "#card-caption-input",
 );
 
+//cardel
 const previewModal = document.querySelector("#preview-modal");
 const previewModalCloseBtn = previewModal.querySelector(".modal__close");
 const previewImageEl = previewModal.querySelector(".modal__image");
@@ -89,15 +102,6 @@ function getCardElement(data) {
 
   return cardElement;
 }
-
-const profileNameEl = document.querySelector(".profile__name");
-const profileDescriptionEl = document.querySelector(".profile__description");
-
-profileEditBtn.addEventListener("click", function () {
-  editProfileNameInput.value = profileNameEl.textContent;
-  editProfileDescriptionInput.value = profileDescriptionEl.textContent;
-  openModal(profileEditModal);
-});
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
@@ -141,6 +145,7 @@ function handleEditNewPostSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   editNewPostForm.reset();
+  disableButton(editNewPostBtn);
   closeModal(newPostModal);
 }
 
