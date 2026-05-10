@@ -1,8 +1,8 @@
 const settings = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
-  submitButtonSelector: ".button",
-  inactiveButtonClass: "modal__submit_btn_disable",
+  submitButtonSelector: ".modal__submit-btn",
+  inactiveButtonClass: "modal__submit-btn_disable",
   inputErrorClass: "modal__input_type_error",
   errorClass: "modal__error",
 };

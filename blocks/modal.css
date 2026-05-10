@@ -17,9 +17,9 @@
   z-index: 1;
 }
 
-.modal__type_preview {
+.modal_type_preview {
   padding: 0 16px;
-  background-color: dark;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal_is-opened {
@@ -46,14 +46,14 @@
   opacity: 0.4;
 }
 
-.modal__close_type_preview {
+.modal_close_type_preview {
   background-image: url(../images/close-preview.svg);
   color: #ffffff;
   top: 0;
   right: -52.5px;
 }
 
-.modal__close_type_preview:hover {
+.modal_close_type_preview:hover {
   opacity: 0.6;
   background-image: url(../images/close-preview-hover.svg);
 }
@@ -128,7 +128,7 @@
   color: #ff0000b2;
 }
 
-.modal__submit_btn {
+.modal__submit-btn {
   margin-right: auto;
   padding: 0;
   min-width: 156px;
@@ -148,7 +148,7 @@
   background-color: #000000;
 }
 
-.modal__submit_btn_disable {
+.modal__submit-btn_disable {
   background-color: gray;
 }
 
