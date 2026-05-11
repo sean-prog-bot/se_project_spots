@@ -56,7 +56,7 @@ const newPostBtn = document.querySelector(".profile__new-post-btn");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 const editNewPostForm = newPostModal.querySelector(".modal__form");
-const editNewPostBtn = newPostModal.querySelector(".modal__button");
+const editNewPostBtn = newPostModal.querySelector(".modal__submit-btn");
 const editNewPostLinkInput = newPostModal.querySelector("#card-image-input");
 const editNewPostCaptionInput = newPostModal.querySelector(
   "#card-caption-input",
@@ -145,7 +145,7 @@ function handleEditNewPostSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   editNewPostForm.reset();
-  disableButton(editNewPostBtn);
+  disableButton(editNewPostBtn, settings);
   closeModal(newPostModal);
 }
 
