@@ -46,14 +46,14 @@
   opacity: 0.4;
 }
 
-.modal_close_type_preview {
+.modal__close_type_preview {
   background-image: url(../images/close-preview.svg);
   color: #ffffff;
   top: 0;
   right: -52.5px;
 }
 
-.modal_close_type_preview:hover {
+.modal__close_type_preview:hover {
   opacity: 0.6;
   background-image: url(../images/close-preview-hover.svg);
 }
@@ -166,8 +166,12 @@
 }
 
 .modal__caption {
+  margin: 8px 0 0;
+  padding: 4px 8px;
+  width: fit-content;
+  border-radius: 8px;
   color: white;
-  background-color: #000000;
+  background-color: #212121;
 }
 
 @media screen and (max-width: 627px) {
